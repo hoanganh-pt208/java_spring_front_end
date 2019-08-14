@@ -1,3 +1,90 @@
-#test{
-    /*background-color: red !important;*/
+/*Start Style for Top menu*/
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav.cls_top_menu a:hover {
+    color: #00A7DC !important;
+    background-color: #1F1F23 !important;
 }
+/*End Style for Top menu*/
+
+/*Start Style for Tag Conten*/
+.tag_list div span{
+    color: #b0b0b0;
+}
+
+.tag_list>div:hover{
+    background-color: #00A7DC !important;
+}
+
+div.active_tag{
+    background-color: #00A7DC !important;
+}
+
+div.active_tag span{
+    color: white !important;
+}
+
+.navbar-form  button.glyphicon.glyphicon-open:hover,.navbar-form  button.glyphicon.glyphicon-search:hover{
+    background-color: #00A7DC !important;
+}
+/*End Style for Tag Conten*/
+
+
+/*Tree Node Start*/
+ul.tree_node>li{
+    margin-left: -14px;
+    padding-left: 10px;
+}
+
+ul.tree_node li a.item_close{
+    list-style-type: none !important;
+    position: relative !important;
+    background-image: url(images/icon/leaf.gif);
+    padding-left: 22px;
+    background-repeat: no-repeat;
+}
+
+ul.tree_node li a.item_open{
+    list-style-type: none !important;
+    position: relative !important;
+    background-image: url(images/icon/open.gif);
+    padding-left: 22px;
+    background-repeat: no-repeat;
+}
+
+ul.tree_node li span{
+    color: #b0b0b0;
+}
+
+ul.tree_node li, ul.file_upload_infor li{
+    list-style-type: none;
+}
+
+ul.tree_node div.item_close ~ ul{
+    display: none;
+}
+
+ul.tree_node li a {
+    text-decoration: none;
+    color: white;
+}
+
+li.item_close>ul{
+    display: none;
+}
+
+.cls_active_item{
+    background-color: #00A7DC !important;
+}
+
+div.cls_active_item span{
+    color: white !important;
+    background-color: #00A7DC !important;
+}
+
+.cls_child_node{
+    margin-left: -182px;
+    padding-left: 173px;
+}
+ul.tree_node div.cls_child_node:hover{
+    background-color: #00A7DC !important;
+}
+/*Tree Node End*/

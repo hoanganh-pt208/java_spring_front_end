@@ -1,0 +1,68 @@
+<!--Left panel Start -->
+<div class="col-xs-5 col-sm-4 col-md-3 col-lg-2" id="left_content" style="background-color: #1F1F23; color: white; padding: 0px;margin: 0px;position: relative;border-right: 2px solid #080808;border-top: 2px solid #080808;">
+	<div id="search_left_menu" style="background-color: #2D2D33; height: 100%;">
+		<div id="search_left_menu_top" style="background-color: #2D2D33; height: 60%;">
+			<div id ="search_left_menu_top_top" style="background-color: #2D2D33; padding: 1px;height: 33px;">
+				<span style="float: left; font-size: 15px; top: 9px; left: 10px; color: #00A7DC!important;" class="glyphicon glyphicon-th-list">
+				</span>
+				<h5 style="margin-left: 31px; font-size: 16px; font-weight: bold; letter-spacing: 1px;margin-top: 7px;">Category</h5>
+			</div>
+			<div id ="search_left_menu_top_bottom" style="background-color: #26262B ; overflow: auto; overflow-x: hidden;">
+				<ul class = "tree_node" style="margin-left: -16px; margin-top: 0px; ">
+					<!-- Start Tree Category		 -->
+					<!-- End   Tree Category		 -->
+				</ul>
+			</div>
+		</div>
+		<div id="search_left_menu_bottom" style="background-color: #2D2D33;height: 40%;">
+			<div id ="search_left_menu_bottom_top" style="background-color: #2D2D33; padding: 1px; height: 33px;">
+				<span style="float: left; font-size: 15px; top: 9px; left: 10px; color: #00A7DC!important;" class="glyphicon glyphicon-tags">
+				</span>
+				<h5 style="margin-left: 31px; font-size: 16px; font-weight: bold; letter-spacing: 1px;margin-top: 7px;">Tag
+					<span style="font-size: 15px; left: 10px;" class="glyphicon glyphicon-cog"></span>
+				</h5>
+			</div>
+			<div id ="search_left_menu_bottom_bottom" style="background-color: #26262B; overflow: auto; overflow-x: hidden;" class="tag_list" id="tag_list">
+				<!-- Start Tag List		 -->
+				<!-- End   Tag List		 -->
+			</div>
+		</div>
+	</div>
+	<div>
+		<nav class="navbar navbar-inverse" style="background-color: #333333; height: 30px; border-radius: 0px; border: none;"> 
+			<span class="glyphicon glyphicon-user" style="color: #00A7DC; padding-right: 6px; padding-top: 9px; margin-left: 10px;"></span>
+			<span><?php echo txt_copyright?></span>
+		</nav>
+	</div>
+</div>
+<script type="text/javascript">
+	setTimeout(function () {
+      	document.getElementById('search_left_menu').style.height = ($(window).height() - (55+30+6+3)).toString()+'px';
+      	var search_left_menu_height = $(window).height() - (55+30+6+3);
+
+      	var search_left_menu_top_height = search_left_menu_height * 6/10;
+      	document.getElementById('search_left_menu_top_bottom').style.height= (search_left_menu_top_height - 33).toString()+'px';
+
+      	var search_left_menu_bottom_height = search_left_menu_height * 4/10;
+		document.getElementById('search_left_menu_bottom_bottom').style.height= (search_left_menu_bottom_height - 33).toString()+'px';
+    }, 1);
+    window.addEventListener('resize', function(event){
+    	document.getElementById('search_left_menu').style.height = ($(window).height() - (55+30+6+3)).toString()+'px';
+    	var search_left_menu_height = $(window).height() - (55+30+6+3);
+
+    	var search_left_menu_top_height = search_left_menu_height * 6/10;
+      	document.getElementById('search_left_menu_top_bottom').style.height= (search_left_menu_top_height - 33).toString()+'px';
+
+      	var search_left_menu_bottom_height = search_left_menu_height * 4/10;
+		document.getElementById('search_left_menu_bottom_bottom').style.height= (search_left_menu_bottom_height - 33).toString()+'px';
+	})
+	// Call funtion draw Tag list
+	fn_draw_tag_list();
+	// Call funtion draw Tree Category
+	fn_draw_category_tree();
+</script>
+<!-- Left panel End -->
+
+<!-- Right panel Start -->
+<div class="col-xs-7 col-sm-8 col-md-9 col-lg-10" style="border-top: 2px solid black; background-color: #1F1F23; padding: 0px;"></div>
+<!-- Right panel End-->
