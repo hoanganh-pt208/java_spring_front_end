@@ -118,7 +118,7 @@ function fn_draw_tag_list(){
     });
 }
 
-// function draw tree category
+// Start function draw tree category
 function fn_draw_category_tree(){
     $.ajax({
         type: "GET",
@@ -180,3 +180,25 @@ function has_children(result,id) {
     }
     return flag;
 }
+// End function draw tree category
+
+// Funtion Upload content
+$("#btnSubmit").click(function (event) {
+
+    // alert("btnSubmit form js");
+    //stop submit the form, we will post it manually.
+    event.preventDefault();
+
+    // Get form
+    var form = $('#fileUploadForm')[0];
+    // console.log('form');
+    // console.log(form);
+    var name = $('input[type=file]').val();
+    console.log('name');
+    console.log(name);
+    // Create an FormData object 
+    var data = new FormData(form);
+    // console.log('data');
+    // console.log(data);
+
+})
