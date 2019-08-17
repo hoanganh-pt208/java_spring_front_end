@@ -1,5 +1,5 @@
 $_SERVER_DOMAIN = "http://localhost:8080/Sping_MVC_Project/",
-$_UI_DOMAIN = "http://localhost/Study_Again/java/Demo_project_java_UI/admin/",
+// $_UI_DOMAIN = "http://localhost/Study_Again/java/Demo_project_java_UI/admin/",
 
 // function login
 $("#formLogin").submit(function() {
