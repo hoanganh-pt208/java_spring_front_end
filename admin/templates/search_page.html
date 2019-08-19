@@ -1,6 +1,7 @@
 <!--Left panel Start -->
 <div class="col-xs-5 col-sm-4 col-md-3 col-lg-2" id="left_content" style="background-color: #1F1F23; color: white; padding: 0px;margin: 0px;position: relative;border-right: 2px solid #080808;border-top: 2px solid #080808;">
 	<div id="search_left_menu" style="background-color: #2D2D33; height: 100%;">
+		<!-- Category -->
 		<div id="search_left_menu_top" style="background-color: #2D2D33; height: 60%;">
 			<div id ="search_left_menu_top_top" style="background-color: #2D2D33; padding: 1px;height: 33px;">
 				<span style="float: left; font-size: 15px; top: 9px; left: 10px; color: #00A7DC!important;" class="glyphicon glyphicon-th-list">
@@ -14,6 +15,7 @@
 				</ul>
 			</div>
 		</div>
+		<!-- Tag List -->
 		<div id="search_left_menu_bottom" style="background-color: #2D2D33;height: 40%;">
 			<div id ="search_left_menu_bottom_top" style="background-color: #2D2D33; padding: 1px; height: 33px;">
 				<span style="float: left; font-size: 15px; top: 9px; left: 10px; color: #00A7DC!important;" class="glyphicon glyphicon-tags">
@@ -35,32 +37,6 @@
 		</nav>
 	</div>
 </div>
-<script type="text/javascript">
-	setTimeout(function () {
-      	document.getElementById('search_left_menu').style.height = ($(window).height() - (55+30+6+3)).toString()+'px';
-      	var search_left_menu_height = $(window).height() - (55+30+6+3);
-
-      	var search_left_menu_top_height = search_left_menu_height * 6/10;
-      	document.getElementById('search_left_menu_top_bottom').style.height= (search_left_menu_top_height - 33).toString()+'px';
-
-      	var search_left_menu_bottom_height = search_left_menu_height * 4/10;
-		document.getElementById('search_left_menu_bottom_bottom').style.height= (search_left_menu_bottom_height - 33).toString()+'px';
-    }, 1);
-    window.addEventListener('resize', function(event){
-    	document.getElementById('search_left_menu').style.height = ($(window).height() - (55+30+6+3)).toString()+'px';
-    	var search_left_menu_height = $(window).height() - (55+30+6+3);
-
-    	var search_left_menu_top_height = search_left_menu_height * 6/10;
-      	document.getElementById('search_left_menu_top_bottom').style.height= (search_left_menu_top_height - 33).toString()+'px';
-
-      	var search_left_menu_bottom_height = search_left_menu_height * 4/10;
-		document.getElementById('search_left_menu_bottom_bottom').style.height= (search_left_menu_bottom_height - 33).toString()+'px';
-	})
-	// Call funtion draw Tag list
-	fn_draw_tag_list();
-	// Call funtion draw Tree Category
-	fn_draw_category_tree();
-</script>
 <!-- Left panel End -->
 
 <!-- Right panel Start -->
@@ -69,45 +45,15 @@
 	  	<nav class="navbar navbar-inverse" style="border: none; border-radius: 0px; background-color: #333337; height: 30px; min-height: 45px;">
 	      	<form class="navbar-form" action="" style=" margin-top: 5px;" onsubmit="return false;">
 		        <div class="form-group">
-		          	<input type="text" onkeypress="isInputNumberLetter(event)" id="search_text" style="color: white; border-radius: unset; background-color: #1F1F1F; height: 27px; width: 376px; border: 1px solid black; box-shadow: none;" class="form-control" placeholder="Enter your search word" name="search">
+		          	<input type="text" autocomplete="off" onkeypress="isInputNumberLetter(event)" id="search_text" style="color: white; border-radius: unset; background-color: #1F1F1F; height: 27px; width: 376px; border: 1px solid black; box-shadow: none;" class="form-control" placeholder="Enter your search word" name="search">
 		        </div>
 		        <button value="search" type="" class="glyphicon glyphicon-search" style="outline:none; margin-left: 5px;border-radius: 3px; height: 26px; border: none; background-color: #B0B0B0; top: 3px;" data-toggle="tooltip" data-placement="bottom" title=""></button>
-		        <button value="upload" data-toggle="modal" data-target="#myModal" type="button" class="glyphicon glyphicon-open" style="outline:none; margin-left: 5px;border-radius: 3px; height: 26px; border: none; background-color: #B0B0B0; top: 3px;" data-toggle="tooltip" data-placement="bottom" title=""></button>
-		        
+		        <button value="upload" data-toggle="modal" data-target="#myModal" type="button" class="glyphicon glyphicon-open" style="outline:none; margin-left: 5px;border-radius: 3px; height: 26px; border: none; background-color: #B0B0B0; top: 3px;" data-toggle="tooltip" data-placement="bottom" title=""></button>   
 		        <a id="content_by_list_view" class="view glyphicon glyphicon-th-list" style="cursor: pointer; text-decoration: none; outline:none; float: right; border: none; top: 7px; background-color: transparent; font-size: 15px; padding-left: 12px;" data-toggle="tooltip" data-placement="bottom" title="List View"></a>
 	      		<a id="content_by_thumb_view" class="view glyphicon glyphicon-th-large active" style="cursor: pointer; text-decoration: none; outline:none; float: right; border: none; top: 7px; background-color: transparent; font-size: 16px;" data-toggle="tooltip" data-placement="bottom" title="Thumb View"></a>
 		    </form>
 	  	</nav>
 	</div>
-	<script type="text/javascript">
-		// function search accept only Number and Letter
-		function isInputNumberLetter(evt){
-            var ch = String.fromCharCode(evt.which);
-            if(!(/[a-zA-Z0-9]/.test(ch))){
-                evt.preventDefault();
-            }
-        }
-        // add class active for type view
-		$( "#tab_bar a" ).click(function() {
-			$( "#tab_bar a" ).removeClass('active');
-			$(this).addClass('active');
-			if(this.id == "content_by_thumb_view"){
-				$( "#tab_image_content div.image_list" ).addClass('hidden');
-				$( "#tab_image_content div.image_thumb" ).removeClass('hidden');
-
-				$( "#tab_video_content div#video_list" ).addClass('hidden');
-				$( "#tab_video_content div.video_thumb" ).removeClass('hidden');
-				
-			}
-			if(this.id == "content_by_list_view"){
-				$( "#tab_image_content div.image_list" ).removeClass('hidden');
-				$( "#tab_image_content div.image_thumb" ).addClass('hidden');
-
-				$( "#tab_video_content div#video_list" ).removeClass('hidden');
-				$( "#tab_video_content div.video_thumb" ).addClass('hidden');
-			}
-		});
-	</script>
 
 	<!-- Modal Upload Content Start-->
 	<div id="myModal" class="modal fade" role="dialog">
@@ -147,17 +93,7 @@
 	</nav>
 	</div>
 </div>
-<script type="text/javascript">
-	setTimeout(function () {
-      	document.getElementById('search_right_menu').style.height = ($(window).height() - (55+45+30+6+3)).toString()+'px';
-    }, 1);
-    window.addEventListener('resize', function(event){
-    	document.getElementById('search_right_menu').style.height = ($(window).height() - (55+45+30+6+3)).toString()+'px';
-	})
-	// Call funtion draw Tag list
-	fn_draw_tag_list();
-	// Call funtion draw Tree Category
-	fn_draw_category_tree();
-</script>
 <!-- Right panel End-->
-<!--<script src="http://localhost/Study_Again/java/Demo_project_java_UI/admin/js/form.js"></script>-->
+
+<!-- Include file js of this page -->
+<script src="js/search_page.js"></script>

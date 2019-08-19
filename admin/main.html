@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- <link rel="SHORTCUT ICON" href="http://localhost/Study_Again/java/Demo_project_java_UI/admin/css/images/logo/proxima_favicon.ico"/>  -->
-	<link rel="SHORTCUT ICON" href="css/images/logo/proxima_favicon.ico"/> 
+	<link rel="SHORTCUT ICON" href="images/logo/proxima_favicon.ico"/> 
     <title>Admin Hoàng Anh</title>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
-    <!-- <link rel="stylesheet" href="http://localhost/Study_Again/java/Demo_project_java_UI/admin/bootstrap/css/bootstrap.min.css"/> 
-    <link rel="stylesheet" href="http://localhost/Study_Again/java/Demo_project_java_UI/admin/css/style.css" type="text/css"> -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/> 
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css"/> 
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="libs/js/jquery_2_2_4.min.js"></script>
+	<script src="libs/js/modernizr_2_8_3.js"></script>
 	<script type="text/javascript">
 		$(window).load(function() {
 			$(".se-pre-con").fadeOut("slow");;
@@ -31,7 +28,7 @@
 			width: 100%;
 			height: 100%;
 			z-index: 9999;
-			background: url(https://j2n9a3i8.stackpathcdn.com/wp-content/uploads/2014/08/Preloader_11.gif) center no-repeat #fff;
+			background: url('images/loading/processing.gif') center no-repeat #fff !important;
 		}
 	</style>
 </head>
@@ -43,7 +40,7 @@
 				<nav class="navbar navbar-inverse" style="border-radius: 0px !important; border: 1px solid #1F1F23;">
 				  	<div class="container-fluid" style="background-color: #1F1F23 !important;">
 					    <div class="navbar-header">
-					      	<img src="css/images/logo/logo_archive.png" style="height: 50px; padding-top : 11px; padding-right : 50px;">
+					      	<img src="images/logo/logo_archive.png" style="height: 50px; padding-top : 11px; padding-right : 50px;">
 					    </div>
 					    <ul class="nav navbar-nav cls_top_menu">
 					    	<li style="padding-right: 25px;cursor: pointer;" class="cls_home_menu"><a><span class="glyphicon glyphicon-home" style="top: 1px; font-size: 16px; padding-right: 5px;"></span> <span style="font-size: 20px;">Home</span></a></li>
@@ -66,24 +63,8 @@
 	  	</div>
 	</div>
 </body>
-	<script src="js/jquery.form.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-	<script src="js/form.js"></script>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="libs/js/jquery.form.min.js"></script>
+    <script src="libs/js/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
 </html>
-
-<script type="text/javascript">
-	setTimeout(function () {
-      	document.getElementById('content').style.height = ($(window).height() - (55)).toString()+'px';
-      	document.getElementById('home_content').style.height = ($(window).height() - (55)).toString()+'px';
-      	document.getElementById('search_content').style.height = ($(window).height() - (55)).toString()+'px';
-    }, 1);
-    window.addEventListener('resize', function(event){
-    	document.getElementById('content').style.height = ($(window).height() - (55)).toString()+'px';
-      	document.getElementById('home_content').style.height = ($(window).height() - (55)).toString()+'px';
-      	document.getElementById('search_content').style.height = ($(window).height() - (55)).toString()+'px';
-	})
-	$("#search_content").load("templates/search_page.html");
-	$("#home_content").load("templates/home_page.html");
-</script>

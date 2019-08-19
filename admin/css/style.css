@@ -37,7 +37,7 @@ ul.tree_node>li{
 ul.tree_node li a.item_close{
     list-style-type: none !important;
     position: relative !important;
-    background-image: url(images/icon/leaf.gif);
+    background-image: url(../images/icon/leaf.gif) !important;
     padding-left: 22px;
     background-repeat: no-repeat;
 }
@@ -45,7 +45,7 @@ ul.tree_node li a.item_close{
 ul.tree_node li a.item_open{
     list-style-type: none !important;
     position: relative !important;
-    background-image: url(images/icon/open.gif);
+    background-image: url(../images/icon/open.gif) !important;
     padding-left: 22px;
     background-repeat: no-repeat;
 }
