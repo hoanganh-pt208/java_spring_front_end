@@ -19,7 +19,7 @@ $("#formLogin").submit(function() {
 		},
 	    dataType : 'json',
         success: function (result) {
-        	if(result.Code == 200){
+        	if(result.status == "success"){
         		if($remember_me == true){
 			    	setCookie($user_name,$password,1,1);
 			    }else{

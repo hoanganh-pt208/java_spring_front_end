@@ -44,6 +44,7 @@ function fn_draw_tag_list(){
         url: $_SERVER_DOMAIN + "tag/getTagList",
         dataType : 'json',
         success: function(result){
+            var result = result.data;
             if(result.length > 0){
                 var html = '';
                 $.each (result, function (key, row){
@@ -90,6 +91,7 @@ function fn_draw_category_tree(){
         url: $_SERVER_DOMAIN + "category/getListCategory",
         dataType : 'json',
         success: function(result){
+            var result = result.data;
             if(result.length > 0){
                 var html = '';
                 html += '<li><div class="item_open cls_child_node cls_active_item" style="cursor: pointer;"><a class="item_open" id='+result[0]["id"]+'></a><span id='+result[0]["id"]+'>'+result[0]["name"]+'</span></div>';
