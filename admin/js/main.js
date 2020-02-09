@@ -1,6 +1,6 @@
 // Domain of Back-End (Java Spring)
 $_SERVER_DOMAIN = "http://localhost:8080/Sping_MVC_Project/",
-
+// Spring_MVC_Annotation
 // Function set Height for main menu after render and window resize
 setTimeout(function () {
   	document.getElementById('content').style.height = ($(window).height() - (55)).toString()+'px';
