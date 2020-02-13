@@ -1,0 +1,268 @@
+input[type="text"]:focus, input[type="password"]:focus, select#lang_type_selected:focus { 
+    border: 0;
+    border: 1px solid #ccc;
+    outline: 0;
+    box-shadow: none;
+}
+#lang_type_selected:focus{
+    border: none !important;
+}
+body {   
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    /*overflow: auto;*/
+    background-image: url(../images/login_bg.jpg);
+}
+/*.header {
+    min-width: 700px;
+}
+
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}*/
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(38, 38, 43);; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #6A6A73;
+    border-radius: 20px;
+}
+
+.log_out:hover{
+    color: #00A7DC !important;
+}
+
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav.cls_top_menu a:hover {
+    color: #00A7DC !important;
+    background-color: #1F1F23 !important;
+}
+
+#search_text::placeholder {
+    color: white !important;
+    font-size: 13px;
+    opacity: 1 !important;
+}
+
+input#search_text:focus { 
+    background-color: #00A7DC !important;
+    border: 1px solid white !important;
+    color: white !important;
+}
+
+#tab_bar a.active{
+    color: #00A7DC !important;
+}
+
+.glyphicon-th-list, .glyphicon-th-large{
+    color: white !important;
+}
+
+#slidecontainer .slider {
+    -webkit-appearance: none;
+    width: 20%;
+    height: 5px;
+    background: #DDDAD7;
+    outline: none;
+}
+#slidecontainer .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 5px;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #15A4FA;
+    cursor: pointer;
+}
+#myRange{
+    width: 155px;
+    float: right;
+    margin-right: 13px;
+}
+
+.nav-tabs>li>a {
+    color: #b0b0b0;
+    border: none !important;
+    padding: 3px 10px;
+    margin-top: 16px;
+    background-color: #262632 ;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.nav-tabs>li.active>a,.nav-tabs>li.active>a:hover, .nav-tabs>li>a:hover{
+    color: white;
+    background-color: #00A7DC;
+    border-bottom-color: transparent;
+    cursor: default;
+    border: none !important;
+    padding: 3px 10px;
+    margin-top: 16px;
+}
+
+/*Tree Node Start*/
+ul.tree_node>li, ul.tree_node_upload>li, ul.tree_node_video>li{
+    margin-left: -14px;
+    padding-left: 10px;
+}
+
+ul.tree_node li a.item_close, ul.tree_node_upload li a.item_close, ul.tree_node_video li a.item_close{
+    list-style-type: none !important;
+    position: relative !important;
+    background-image: url(../images/icon/leaf.gif) !important;
+    padding-left: 22px;
+    background-repeat: no-repeat;
+}
+
+ul.tree_node li a.item_open, ul.tree_node_upload li a.item_open, ul.tree_node_video li a.item_open, a.item_open{
+    list-style-type: none !important;
+    position: relative !important;
+    background-image: url(../images/icon/open.gif) !important;
+    padding-left: 22px;
+    background-repeat: no-repeat;
+}
+
+ul.tree_node li span, ul.tree_node_upload li span, ul.tree_node_video li span{
+    color: #b0b0b0;
+}
+
+ul.tree_node li, ul.file_upload_infor li, ul.tree_node_upload li, ul.tree_node_video li{
+    list-style-type: none;
+}
+
+ul.tree_node div.item_close ~ ul, ul.tree_node_upload div.item_close ~ ul, ul.tree_node_video div.item_close ~ ul{
+    display: none;
+}
+
+ul.tree_node li a, ul.tree_node_upload li a, ul.tree_node_video li a {
+    text-decoration: none;
+    color: white;
+}
+
+li.item_close>ul{
+    display: none;
+}
+
+.cls_active_item{
+    background-color: #00A7DC !important;
+}
+
+div.cls_active_item span{
+    color: white !important;
+}
+
+.cls_child_node{
+    margin-left: -182px;
+    padding-left: 173px;
+}
+ul.tree_node div.cls_child_node:hover, ul.tree_node_upload div.cls_child_node:hover, ul.tree_node_video div.cls_child_node:hover{
+    background-color: #00A7DC !important;
+}
+/*Tree Node End*/
+
+.tag_list div span{
+    color: #b0b0b0;
+}
+
+.tag_list>div:hover{
+    background-color: #00A7DC !important;
+}
+
+div.active_tag{
+    background-color: #00A7DC !important;
+}
+
+div.active_tag span{
+    color: white !important;
+}
+
+.navbar-form  button.glyphicon.glyphicon-open:hover,.navbar-form  button.glyphicon.glyphicon-search:hover{
+    background-color: #00A7DC !important;
+}
+
+.image_thumb .thumbnail:hover, .video_thumb .thumbnail:hover{
+    border: 1px solid #00A7DC !important;
+}
+.image_thumb .thumbnail.active, .video_thumb .thumbnail.active{
+    border: 1px solid black !important;
+    background-color: #00A7DC !important;
+}
+
+#contextMenuModel div.modal-body>div:hover{
+    background-color: #00A7DC !important;
+}
+
+/*Start Css for choise file upload*/
+#image-file {
+    width: 53px !important;
+    outline: none;
+    float: left;
+}
+
+#image-file::-webkit-file-upload-button {
+    visibility: hidden;
+}
+#image-file::before {
+    content: 'Add';
+    font-weight: bold;
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #737576;
+    border-radius: 5px;
+    padding: 2px 10px;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-size: 10pt;
+}
+#image-file:hover::before, #myModal .modal-body .btn.btn-default:hover, #selectedFiles .selected_item_image_uploaded{
+    background-color: #00A7DC !important;
+}
+
+#myModal .modal-body .btn.btn-default{
+    padding: 2px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 10pt;
+    border: 1px solid #737576;
+    outline: none;
+}
+/*End Css for choise file upload*/
+
+/*Css for paging Image Tag*/
+.image_paging button:hover{
+    color: #00A7DC !important;
+}
+.cls_disable{
+    pointer-events: none;
+    color: #474c55;
+}
+/* Start css for detail content when Hover*/
+.description {
+    display:none;
+    position:absolute;
+    border:1px solid #000000;
+   /* width:100px;
+    height:50px;*/
+    margin-left: 170px;
+    background-color: #00A7DC !important;
+}
+/* End css for detail content when Hover*/
