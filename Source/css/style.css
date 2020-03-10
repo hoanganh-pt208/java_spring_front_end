@@ -266,3 +266,67 @@ div.active_tag span{
     background-color: #00A7DC !important;
 }
 /* End css for detail content when Hover*/
+
+
+/*Start Header CSS*/
+.header_big_mode {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 3;
+    height: 53px;
+    background-color: #1f1f23;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 14px;
+    zoom: 1;
+    border-bottom: 2px solid #080808;
+}
+
+.active_top_menu{
+    color: rgb(0, 167, 220);
+}
+
+header img {
+    float: left;
+}
+
+.header_big_mode ul {
+    float: left;
+    margin: 25px 0 0 0;
+    position: absolute;
+    width: 1100px;
+    margin-left: 230px;
+}
+
+header li {
+    float: left;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    list-style-type: none;
+}
+
+.header_big_mode .logout {
+    float: right;
+    margin: 15px 50px 0 0;
+    cursor: pointer;
+    height: 28px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+header button {
+    border: 0;
+    color: #ffffff;
+    font-size: 13px;
+    height: 20px;
+    padding: 0px 10px 5px 15px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/*End Header CSS*/

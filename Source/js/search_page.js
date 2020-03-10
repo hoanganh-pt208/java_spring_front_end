@@ -24,12 +24,12 @@ window.addEventListener('resize', function(event){
 
 // JS set height for Right menu in Search Page after render
 setTimeout(function () {
-    document.getElementById('search_right_menu').style.height = ($(window).height() - (139)).toString()+'px';
+    document.getElementById('search_right_menu').style.height = ($(window).height() - (184)).toString()+'px';
 }, 1);
 
 // // JS set height for Right menu in Search Page when window change size
 window.addEventListener('resize', function(event){
-    document.getElementById('search_right_menu').style.height = ($(window).height() - (139)).toString()+'px';
+    document.getElementById('search_right_menu').style.height = ($(window).height() - (184)).toString()+'px';
 })
 
 $_SERVER_DOMAIN = "http://localhost:8080/Sping_MVC_Project/",
