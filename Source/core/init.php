@@ -14,22 +14,22 @@ $session->start();
 $_DOMAIN = 'index.php';
 
 // function login
-if(isset($_POST['login'])){
-    $user_name = trim(htmlspecialchars(addslashes($_POST['name'])));
-    $password = md5(trim(htmlspecialchars(addslashes($_POST['password']))));
+// if(isset($_POST['login'])){
+//     $user_name = trim(htmlspecialchars(addslashes($_POST['name'])));
+//     $password = md5(trim(htmlspecialchars(addslashes($_POST['password']))));
 
-   	$sql_check_user_exist = "SELECT * FROM user_mng WHERE user_name = '$user_name' AND password = '$password'";
+//    	$sql_check_user_exist = "SELECT * FROM user_mng WHERE user_name = '$user_name' AND password = '$password'";
    	
-    $error = null;
-   	if ($db->num_rows($sql_check_user_exist)){
-   	    $session->send($user_name);
-        echo '<script>location.href="'.$_DOMAIN.'";</script>';
-   	    $db->close();
-   	    $error = null;
-   	}else{
-        $error = 1;
-    }
-}
+//     $error = null;
+//    	if ($db->num_rows($sql_check_user_exist)){
+//    	    $session->send($user_name);
+//         echo '<script>location.href="'.$_DOMAIN.'";</script>';
+//    	    $db->close();
+//    	    $error = null;
+//    	}else{
+//         $error = 1;
+//     }
+// }
  
 // Check session
 if ($session->get() != ''){

@@ -4,7 +4,8 @@
 	    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" >
 	    	<img style="width: 340px;" src="images/logo/proxima_login_logo.png">
 	    	<br/><br/>
-	    	<form method="POST" id="formLogin" action="" autocomplete="off">
+	    	<!-- <form method="POST" id="formLogin" action="" autocomplete="off"> -->
+	    	<form method="POST" id="formLogin" autocomplete="off" onsubmit="fn_login(); return false;">
 				<div class="form-group">
 					<div class="input-group">
 						<span class="input-group-addon"><i class="glyphicon glyphicon-user icon_login_form"></i></span>
