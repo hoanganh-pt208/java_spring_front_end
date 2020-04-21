@@ -9,13 +9,13 @@
 				<div class="form-group">
 					<div class="input-group">
 						<span class="input-group-addon"><i class="glyphicon glyphicon-user icon_login_form"></i></span>
-						<input style="min-width: 300px;" id="user_login" required type="text" class="form-control no-border" value="<?php if(isset($_COOKIE["name"])) { echo $_COOKIE["name"]; } ?>" name="name" placeholder="<?php echo txt_userid; ?>">
+						<input style="min-width: 300px;" id="user_login" required type="text" class="form-control no-border" value="admin" name="name" placeholder="<?php echo txt_userid; ?>">
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="input-group">
 						<span class="input-group-addon"><i class="glyphicon glyphicon-lock icon_login_form"></i></span>
-						<input style="min-width: 300px;" id="pass_login" required type="password" class="form-control" value="<?php if(isset($_COOKIE["password"])) { echo $_COOKIE["password"]; } ?>" name="password" placeholder="<?php echo txt_password; ?>">
+						<input style="min-width: 300px;" id="pass_login" required type="password" class="form-control" value="1111" name="password" placeholder="<?php echo txt_password; ?>">
 					</div>
 				</div>
 				<button type="submit" name="login" class="btn btn-primary btn-block" style="min-width: 340px;"><?php echo txt_login?></button><br>
